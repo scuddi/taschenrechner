@@ -8,8 +8,12 @@ title = tk.Label(text="Welcome to my calculator!\n\nLet the math begin. ",
                  background = "#bdc7be",
                  foreground = "#111211",
                  width = 37,
-                 height = 6
+                 height = 5
                  )
+
+#input field
+
+input_field = tk.Entry(width = 8 , font = ("Arial", 20))
 
 #operator buttons
 
@@ -48,6 +52,11 @@ rest_button = tk.Button(text="Rest",
                         height = "3",
                         background = "#bdc7be"
                         )
+delete_button = tk.Button(text="C",
+                          width = "8",
+                          height = "3",
+                          background = "#bdc7be"
+                          )
 
 #number buttons
 
@@ -113,24 +122,30 @@ number_9 = tk.Button(text="9",
 
 #graphical interface/grid of buttons
 
-
 title.grid(row=0, column=0, columnspan=4)
 
-number_7.grid(row=1, column=0)
-number_8.grid(row=1, column=1)
-number_9.grid(row=1, column=2)
-plus_button.grid(row=1, column=3)
-number_4.grid(row=2, column=0)
-number_5.grid(row=2, column=1)
-number_6.grid(row=2, column=2)
-minus_button.grid(row=2, column=3)
-number_1.grid(row=3, column=0)
-number_2.grid(row=3, column=1)
-number_3.grid(row=3, column=2)
-multiplicator_button.grid(row=3, column=3)
-division_button.grid(row=4, column=0)
-rest_button.grid(row=4, column=1)
-equal_button.grid(row=4, column=3)
+#input field
+
+input_field.grid (row=1, column=0, columnspan=2)
+
+#buttons
+
+number_7.grid(row=2, column=0)
+number_8.grid(row=2, column=1)
+number_9.grid(row=2, column=2)
+plus_button.grid(row=2, column=3)
+number_4.grid(row=3, column=0)
+number_5.grid(row=3, column=1)
+number_6.grid(row=3, column=2)
+minus_button.grid(row=3, column=3)
+number_1.grid(row=4, column=0)
+number_2.grid(row=4, column=1)
+number_3.grid(row=4, column=2)
+multiplicator_button.grid(row=4, column=3)
+division_button.grid(row=5, column=0)
+rest_button.grid(row=5, column=1)
+delete_button.grid(row=5, column=2)
+equal_button.grid(row=5, column=3)
 
 
 
