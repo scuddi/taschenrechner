@@ -1,17 +1,13 @@
-events = []
+from tkinter import *
 
-# Create an event handler
-def handle_keypress(event):
-    """Print the character associated to the key pressed"""
-    print(event.char)
+root=Tk()
 
-while True:
-    if events == []:
-        continue
+url = Label(root,text="Enter Url")
+url.grid(row=0,padx=10,pady=10)
 
-    event = events[0]
+entry_url = Entry(root,width="50")
+entry_url.grid(row=0,column=1,padx=5,pady=10,ipady=3)
 
-    # If event is a keypress event object
-    if event.type == "keypress":
-        # Call the keypress event handler
-        handle_keypress(event)
+root.geometry("600x300+150+150")
+
+root.mainloop()

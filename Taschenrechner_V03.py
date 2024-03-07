@@ -1,6 +1,14 @@
 # ToDo: GUI erstellen
 
+# ToDo: Ideen:
+# ToDo: 1. Anstelle von Entry und Output in der GUI sonst in der Konsole?
+
 import tkinter as tk
+
+#functions for the buttons of the
+
+def plus():
+    print("+")
 
 window = tk.Tk()
 
@@ -13,7 +21,15 @@ title = tk.Label(text="Welcome to my calculator!\n\nLet the math begin. ",
 
 #input field
 
-input_field = tk.Entry(width = 8 , font = ("Arial", 20))
+input_field = tk.Entry(width = 8 ,
+                       font = ("Arial", 20))
+
+#output field
+
+output = "Ergebnis"
+output_field = tk.Label(text = output,
+                        font = ("bold")
+                        )
 
 #operator buttons
 
@@ -24,10 +40,11 @@ equal_button = tk.Button(text="=",
                          )
 
 plus_button = tk.Button(text="+",
-                         width = "8",
-                         height = "3",
-                         background = "#bdc7be"
-                         )
+                        width = "8",
+                        height = "3",
+                        background = "#bdc7be",
+                        command = plus
+                        )
 
 minus_button = tk.Button(text="-",
                       width = "8",
@@ -126,8 +143,11 @@ title.grid(row=0, column=0, columnspan=4)
 
 #input field
 
-input_field.grid (row=1, column=0, columnspan=2)
+input_field.grid(row=1, column=0, columnspan=2)
 
+#output field
+
+output_field.grid(row=1, column=2, columnspan=2)
 #buttons
 
 number_7.grid(row=2, column=0)
