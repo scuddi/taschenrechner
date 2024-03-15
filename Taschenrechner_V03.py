@@ -80,6 +80,12 @@ def n_8():
 def n_9():
     input_field.insert(tk.END, 9)
 
+output = ""
+def equal():
+    middle = input_field.get()
+    output = int(middle)
+    return output
+
 #tkinter window
 
 window = tk.Tk()
@@ -100,7 +106,6 @@ input_field = tk.Entry(window,
 
 #output field
 
-output = "Ergebnis"
 output_field = tk.Label(text = output,
                         font = ("bold")
                         )
@@ -110,7 +115,8 @@ output_field = tk.Label(text = output,
 equal_button = tk.Button(text="=",
                          width = "8",
                          height = "3",
-                         background = "#bdc7be"
+                         background = "#bdc7be",
+                         command = equal
                          )
 
 plus_button = tk.Button(text="+",
