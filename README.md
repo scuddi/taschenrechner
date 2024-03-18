@@ -5,3 +5,4 @@ the calculator is able to to any basic operations (+, -, *, /, % [Rest/Modulus])
 Open ToDos:
 - more mathematical expressions like: ()
 - being able to input floats (,)
+- potentation **
