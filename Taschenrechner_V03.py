@@ -5,34 +5,9 @@
 
 import tkinter as tk
 
-#function disabling multiple operators
-
-# FUNKTIONIERT NOCH NICHT, Python Programm hängt sich auf wegen Endlosschleife
-# Lösungsvorschlag:
-
-""" def plus():
-    input_field.insert(tk.END, "+")
-    anti_redundancy()
-    window.after(1000, enable_buttons)  # Aktiviere die Buttons nach 1000 Millisekunden (1 Sekunde)
-
-# def enable_buttons():
-    plus_button.config(state=tk.NORMAL)
-    minus_button.config(state=tk.NORMAL)
-    multiplicator_button.config(state=tk.NORMAL)
-    division_button.config(state=tk.NORMAL)
-    rest_button.config(state=tk.NORMAL)
-
-#def anti_redundancy():
-    plus_button.config(state=tk.DISABLED)
-    minus_button.config(state=tk.DISABLED)
-    multiplicator_button.config(state=tk.DISABLED)
-    division_button.config(state=tk.DISABLED)
-    rest_button.config(state=tk.DISABLED)
-    
-"""
-
 #functions for the buttons of the
 
+output = ""
 def plus():
     input_field.insert(tk.END,"+")
 
@@ -50,6 +25,7 @@ def rest():
 
 def delete():
     input_field.delete(0, tk.END)
+    output_field.config(text="")
 
 def n_0():
     input_field.insert(tk.END, 0)
@@ -83,8 +59,8 @@ def n_9():
 output = ""
 def equal():
     middle = input_field.get()
-    output = int(middle)
-    return output
+    output = eval(middle)
+    output_field.config(text=output)
 
 #tkinter window
 
@@ -101,6 +77,7 @@ title = tk.Label(text="Welcome to my calculator!\n\nLet the math begin. ",
 
 input_field = tk.Entry(window,
                        width = 17,
+                       justify = "center",
                        font = ("Arial", 20))
 
 
