@@ -17,15 +17,27 @@ def minus():
 def multiplicator():
     input_field.insert(tk.END,"*")
 
+def potentiate():
+    input_field.insert(tk.END, "**")
+
+def open_bracket():
+    input_field.insert(tk.END,"(")
+
+def close_bracket():
+    input_field.insert(tk.END, ")")
+
 def division():
     input_field.insert(tk.END,"/")
 
 def rest():
     input_field.insert(tk.END,"%")
 
-def delete():
+def full_delete():
     input_field.delete(0, tk.END)
     output_field.config(text="")
+
+def partial_delete():
+    input_field.delete(input_field.index("end") - 1)
 
 def n_0():
     input_field.insert(tk.END, 0)
@@ -80,7 +92,6 @@ input_field = tk.Entry(window,
                        justify = "center",
                        font = ("Arial", 20))
 
-
 #output field
 
 output_field = tk.Label(text = output,
@@ -89,21 +100,21 @@ output_field = tk.Label(text = output,
 
 #operator buttons
 
-equal_button = tk.Button(text="=",
+equal_button = tk.Button(text = "=",
                          width = "8",
                          height = "3",
                          background = "#bdc7be",
                          command = equal
                          )
 
-plus_button = tk.Button(text="+",
+plus_button = tk.Button(text = "+",
                         width = "8",
                         height = "3",
                         background = "#bdc7be",
                         command = plus
                         )
 
-minus_button = tk.Button(text="-",
+minus_button = tk.Button(text= "-",
                          width = "8",
                          height = "3",
                          background = "#bdc7be",
@@ -117,96 +128,124 @@ multiplicator_button = tk.Button(text="*",
                                  command = multiplicator
                                  )
 
-division_button = tk.Button(text="/",
+division_button = tk.Button(text = "/",
                             width = "8",
                             height = "3",
                             background = "#bdc7be",
                             command = division
                             )
 
-rest_button = tk.Button(text="Rest",
+rest_button = tk.Button(text = "Rest",
                         width = "8",
                         height = "3",
                         background = "#bdc7be",
                         command= rest
                         )
 
-delete_button = tk.Button(text="C",
+full_delete_button = tk.Button(text = "C",
                           width = "8",
                           height = "3",
                           background = "#bdc7be",
-                          command = delete
+                          command = full_delete
                           )
+
+potentiate_button = tk.Button(text = "^",
+                              width = "8",
+                              height = "3",
+                              background = "#bdc7be",
+                              command = potentiate
+                              )
+
+open_bracket_button = tk.Button(text="(",
+                                width = "8",
+                                height = "3",
+                                background = "#bdc7be",
+                                command = open_bracket
+                                )
+
+closing_bracket_button = tk.Button(text=")",
+                                   width = "8",
+                                   height = "3",
+                                   background = "#bdc7be",
+                                   command = close_bracket
+                                   )
+
+del_button = tk.Button(text="Del",
+                       width = "8",
+                       height = "3",
+                       background = "#bdc7be",
+                       command = partial_delete
+                       )
 
 #number buttons
 
 number_0 = tk.Button(text="0",
                      width = "8",
                      height = "3",
-                     background = "#bdc7be",
+                     background = "#b3b5ac",
                      command = n_0
                      )
 
 number_1 = tk.Button(text="1",
                      width = "8",
                      height = "3",
-                     background = "#bdc7be",
+                     background = "#b3b5ac",
                      command = n_1
                      )
 
 number_2 = tk.Button(text="2",
                      width = "8",
                      height = "3",
-                     background = "#bdc7be",
+                     background = "#b3b5ac",
                      command = n_2
                      )
 
 number_3 = tk.Button(text="3",
                      width = "8",
                      height = "3",
-                     background = "#bdc7be",
+                     background = "#b3b5ac",
                      command = n_3
                      )
 
 number_4 = tk.Button(text="4",
                      width = "8",
                      height = "3",
-                     background = "#bdc7be",
+                     background = "#b3b5ac",
                      command = n_4
                      )
 
 number_5 = tk.Button(text="5",
                      width = "8",
                      height = "3",
-                     background = "#bdc7be",
+                     background = "#b3b5ac",
                      command = n_5
                      )
 
 number_6 = tk.Button(text="6",
                      width = "8",
                      height = "3",
-                     background = "#bdc7be",
+                     background = "#b3b5ac",
                      command = n_6
                      )
 
 number_7 = tk.Button(text="7",
                      width = "8",
                      height = "3",
-                     background = "#bdc7be",
+                     background = "#b3b5ac",
                      command = n_7
                      )
 
 number_8 = tk.Button(text="8",
                      width = "8",
                      height = "3",
-                     background = "#bdc7be",
+                     background = "#b3b5ac",
                      command = n_8
                      )
 
 number_9 = tk.Button(text="9",
                      width = "8",
                      height = "3",
-                     background = "#bdc7be",
+                     background = "#b3b5ac",
                      command= n_9
                      )
 
@@ -235,10 +274,14 @@ number_1.grid(row=5, column=0)
 number_2.grid(row=5, column=1)
 number_3.grid(row=5, column=2)
 multiplicator_button.grid(row=5, column=3)
-division_button.grid(row=6, column=0)
-rest_button.grid(row=6, column=1)
-delete_button.grid(row=6, column=2)
-equal_button.grid(row=6, column=3)
+number_0.grid(row=6, column=0)
+open_bracket_button.grid(row=6, column=1)
+closing_bracket_button.grid(row=6, column=2)
+division_button.grid(row=6, column=3)
+rest_button.grid(row=7, column=0)
+del_button.grid(row=7, column=1)
+full_delete_button.grid(row=7, column=2)
+equal_button.grid(row=7, column=3)
 
 
 window.mainloop()
