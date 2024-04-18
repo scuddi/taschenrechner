@@ -1,8 +1,10 @@
 import customtkinter
 
 #functions for the buttons of the
-"""
+
 output = ""
+
+"""
 def plus():
     input_field.insert(CTk.END,"+")
 
@@ -68,6 +70,7 @@ def equal():
     middle = input_field.get()
     output = eval(middle)
     output_field.config(text=output)
+
 """
 # window setup
 
@@ -97,7 +100,7 @@ output_field = customtkinter.CTkLabel(output_frame,
                                       #text = output,
                                       width = 390
                                       )
-
+"""
 #operator buttons
 
 equal_button = customtkinter.CTkButton(master = window,
@@ -177,6 +180,77 @@ del_button = customtkinter.CTkButton(master = window,
                                      #command = partial_delete
                                      )
 
+#number buttons
+
+number_0 = customtkinter.CTkButton(master = window,
+                                   text="0",
+                                   width = "8",
+                                   height = "3",
+                                   #command = n_0
+                                   )
+
+number_1 = customtkinter.CTkButton(master = window,
+                                   text="1",
+                                   width = "8",
+                                   #command = n_1
+                                   )
+
+number_2 = customtkinter.CTkButton(master = window,
+                                   text="2",
+                                   width = "8",
+                                   height = "3"
+                                   #command = n_2
+                                   )
+
+number_3 = customtkinter.CTkButton(master = window,
+                                   text="3",
+                                   width = "8",
+                                   height = "3",
+                                   #command = n_3
+                                   )
+
+number_4 = customtkinter.CTkButton(master = window,
+                                   text="4",
+                                   width = "8",
+                                   height = "3",
+                                   #command = n_4
+                                   )
+
+number_5 = customtkinter.CTkButton(master = window,
+                                   text="5",
+                                   width = "8",
+                                   height = "3",
+                                   #command = n_5
+                                   )
+
+number_6 = customtkinter.CTkButton(master = window,
+                                   text="6",
+                                   width = "8",
+                                   height = "3",
+                                   #command = n_6
+                                   )
+
+number_7 = customtkinter.CTkButton(master = window,
+                                   text="7",
+                                   width = "8",
+                                   height = "3",
+                                   #command = n_7
+                                   )
+
+number_8 = customtkinter.CTkButton(master = window,
+                                   text="8",
+                                   width = "8",
+                                   height = "3",
+                                   #command = n_8
+                                   )
+
+number_9 = customtkinter.CTkButton(master = window,
+                                   text="9",
+                                   width = "8",
+                                   height = "3",
+                                   #command= n_9
+                                   )
+"""
 #define grid
 
 window.columnconfigure((0,1,2,3), weight = 0)
@@ -189,8 +263,8 @@ output_frame.grid(row = 1, column = 0, padx = 10, pady = 5)
 output_field.grid(row=1, column = 0, padx = 10, pady = 5)
 
 # buttons
-"""
-number_7.grid(row=3, column=0)
+
+"""number_7.grid(row=3, column=0)
 number_8.grid(row=3, column=1)
 number_9.grid(row=3, column=2)
 plus_button.grid(row=3, column=3)
