@@ -83,14 +83,14 @@ window.geometry("430x350")
 window.title("Wilkommen in meinem Taschenrechner!")
 
 # input field
-
+"""
 input_field = customtkinter.CTkEntry(master = window,
                                      width = 410,
                                      justify = "center",
                                      font = ("Arial", 20))
-
+"""
 #output field
-
+"""
 output_frame = customtkinter.CTkFrame(master = window,
                                       width = 410,
                                       height = 60,
@@ -100,7 +100,7 @@ output_field = customtkinter.CTkLabel(output_frame,
                                       text = output,
                                       width = 390
                                       )
-
+"""
 #operator buttons
 """
 equal_button = customtkinter.CTkButton(master = window,
@@ -257,16 +257,16 @@ window.columnconfigure((0,1,2,3), weight = 0)
 window.rowconfigure((0,1,2,3), weight = 0)
 
 #input field
-
-input_field.grid(row = 0, column = 0, padx = 10, pady = 10)
-output_frame.grid(row = 1, column = 0, padx = 10, pady = 5)
-output_field.grid(row=1, column = 0, padx = 10, pady = 5)
-
+"""
+input_field.grid(row = 0, column = 0, columnspan = 4, padx = 10, pady = 10)
+output_frame.grid(row = 1, column = 0, columnspan = 4, padx = 10, pady = 5)
+output_field.grid(row=1, column = 0, padx = 10, columnspan = 4, pady = 5)
+"""
 # buttons
 
-number_7.grid(row=2, column=0, sticky = "w", padx = 10)
-number_8.grid(row=2, column=0, sticky = "w", padx = 5)
-number_9.grid(row=2, column=2, sticky = "e", padx = 5)
+number_7.grid(row=2, column=0, sticky = "w", padx = (10,0))
+number_8.grid(row=2, column=1, sticky = "w", padx = 0)
+number_9.grid(row=2, column=2, sticky = "w", padx = 0)
 
 """
 plus_button.grid(row=3, column=3)
