@@ -102,134 +102,135 @@ output_field = customtkinter.CTkLabel(output_frame,
                                       )
 """
 #operator buttons
-"""
+
 equal_button = customtkinter.CTkButton(master = window,
                                        text = "=",
-                                       width = "8",
-                                       height = "3",
+                                       width = 100,
+                                       height = 50,
                                        #command = equal
                                        )
 
 plus_button = customtkinter.CTkButton(master = window,
                                       text = "+",
-                                      width = "8",
-                                      height = "3",
+                                      width = 100,
+                                      height = 50,
                                       #command = plus
                                       )
 
 minus_button = customtkinter.CTkButton(master = window,
                                        text= "-",
-                                       width = "8",
-                                       height = "3",
+                                       width = 100,
+                                       height = 50,
                                        #command = minus
                                        )
 
 multiplicator_button = customtkinter.CTkButton(master = window,
                                                text="*",
-                                               width = "8",
-                                               height = "3",
+                                               width = 100,
+                                               height = 50,
                                                #command = multiplicator
                                                )
 
 division_button = customtkinter.CTkButton(master = window,
                                           text = "/",
-                                          width = "8",
-                                          height = "3",
+                                          width = 100,
+                                          height = 50,
                                           #command = division
                                           )
 
 rest_button = customtkinter.CTkButton(master = window,
-                                      text = "Rest,",
-                                      width = "8",
-                                      height = "3",
+                                      text = "Rest",
+                                      width = 100,
+                                      height = 50,
                                       #command= rest
                                       )
 
 full_delete_button = customtkinter.CTkButton(master = window,
                                              text = "C",
-                                             width = "8",
-                                             height = "3",
+                                             width = 100,
+                                             height = 50,
                                              #command = full_delete
                                              )
 
 potentiate_button = customtkinter.CTkButton(master = window,
                                             text = "^",
-                                            width = "8",
-                                            height = "3",
+                                            width = 100,
+                                            height = 50,
                                             #command = potentiate
                                             )
 
 open_bracket_button = customtkinter.CTkButton(master = window,
                                               text="(",
-                                              width = "8",
-                                              height = "3",
+                                              width = 100,
+                                              height = 50,
                                               #command = open_bracket
                                               )
 
 closing_bracket_button = customtkinter.CTkButton(master = window,
                                                  text=")",
-                                                 width = "8",
-                                                 height = "3",
+                                                 width = 100,
+                                                 height = 50,
                                                  #command = close_bracket
                                                  )
 
 del_button = customtkinter.CTkButton(master = window,
                                      text="Del",
-                                     width = "8",
-                                     height = "3",
+                                     width = 100,
+                                     height = 50,
                                      #command = partial_delete
                                      )
-"""
+
 #number buttons
-"""
+
 number_0 = customtkinter.CTkButton(master = window,
                                    text="0",
-                                   width = "8",
-                                   height = "3",
+                                   width = 100,
+                                   height = 50,
                                    #command = n_0
                                    )
 
 number_1 = customtkinter.CTkButton(master = window,
                                    text="1",
-                                   width = "8",
+                                   width = 100,
+                                   height = 50,
                                    #command = n_1
                                    )
 
 number_2 = customtkinter.CTkButton(master = window,
                                    text="2",
-                                   width = "8",
-                                   height = "3"
+                                   width = 100,
+                                   height = 50,
                                    #command = n_2
                                    )
 
 number_3 = customtkinter.CTkButton(master = window,
                                    text="3",
-                                   width = "8",
-                                   height = "3",
+                                   width = 100,
+                                   height = 50,
                                    #command = n_3
                                    )
 
 number_4 = customtkinter.CTkButton(master = window,
                                    text="4",
-                                   width = "8",
-                                   height = "3",
+                                   width = 100,
+                                   height = 50,
                                    #command = n_4
                                    )
 
 number_5 = customtkinter.CTkButton(master = window,
                                    text="5",
-                                   width = "8",
-                                   height = "3",
+                                   width = 100,
+                                   height = 50
                                    #command = n_5
                                    )
 
 number_6 = customtkinter.CTkButton(master = window,
                                    text="6",
-                                   width = "8",
-                                   height = "3",
+                                   width = 100,
+                                   height = 50
                                    #command = n_6
                                    )
-"""
+
 number_7 = customtkinter.CTkButton(master = window,
                                    text = "7",
                                    width = 100,
@@ -267,25 +268,22 @@ output_field.grid(row=1, column = 0, padx = 10, columnspan = 4, pady = 5)
 number_7.grid(row=2, column=0, sticky = "w", padx = (10,0))
 number_8.grid(row=2, column=1, sticky = "w", padx = 0)
 number_9.grid(row=2, column=2, sticky = "w", padx = 0)
-
-"""
-plus_button.grid(row=3, column=3)
-number_4.grid(row=4, column=0)
-number_5.grid(row=4, column=1)
-number_6.grid(row=4, column=2)
-minus_button.grid(row=4, column=3)
-number_1.grid(row=5, column=0)
-number_2.grid(row=5, column=1)
-number_3.grid(row=5, column=2)
-multiplicator_button.grid(row=5, column=3)
-number_0.grid(row=6, column=0)
-open_bracket_button.grid(row=6, column=1)
-closing_bracket_button.grid(row=6, column=2)
-division_button.grid(row=6, column=3)
-rest_button.grid(row=7, column=0)
-del_button.grid(row=7, column=1)
-full_delete_button.grid(row=7, column=2)
-equal_button.grid(row=7, column=3)
-"""
+plus_button.grid(row=2, column=3)
+number_4.grid(row=3, column=0,sticky = "w", padx = (10,0))
+number_5.grid(row=3, column=1)
+number_6.grid(row=3, column=2)
+minus_button.grid(row=3, column=3)
+number_1.grid(row=4, column=0, sticky = "w", padx = (10,0))
+number_2.grid(row=4, column=1)
+number_3.grid(row=4, column=2)
+multiplicator_button.grid(row=4, column=3)
+number_0.grid(row=5, column=0, sticky = "w", padx = (10,0))
+open_bracket_button.grid(row=5, column=1)
+closing_bracket_button.grid(row=5, column=2)
+division_button.grid(row=5, column=3)
+rest_button.grid(row=6, column=0, sticky = "w", padx = (10,0))
+del_button.grid(row=6, column=1)
+full_delete_button.grid(row=6, column=2)
+equal_button.grid(row=6, column=3)
 
 window.mainloop()
