@@ -38,6 +38,7 @@ def partial_delete():
 
 def n_0():
     input_field.insert(customtkinter.END, 0)
+
 def n_1():
     input_field.insert(customtkinter.END, 1)
 
@@ -194,6 +195,20 @@ del_button = customtkinter.CTkButton(master = window,
                                      command = partial_delete
                                      )
 
+
+#bind function buttons to keyboard buttons
+
+window.bind('<Return>', lambda event: equal())
+window.bind('<+>', lambda event: plus())
+window.bind('-', lambda event: minus())
+window.bind('*', lambda event: multiplicator())
+window.bind('/', lambda event: division())
+window.bind('%', lambda event: rest())
+window.bind('<Delete>', lambda event: full_delete())
+window.bind('<BackSpace>', lambda event: partial_delete())
+window.bind('(', lambda event: open_bracket())
+window.bind(')', lambda event: close_bracket())
+
 #number buttons
 
 number_0 = customtkinter.CTkButton(master = window,
@@ -275,6 +290,19 @@ number_9 = customtkinter.CTkButton(master = window,
                                    fg_color = "#eb711a",
                                    command= n_9
                                    )
+
+#binding of the buttons to the numbpad keys -> 1 to 5 is different for some reason, e.g. '<1>' would be left click on mouse
+
+window.bind('<0>', lambda event: n_0())
+window.bind('1', lambda event: n_1())
+window.bind('2', lambda event: n_2())
+window.bind('3', lambda event: n_3())
+window.bind('4', lambda event: n_4())
+window.bind('5', lambda event: n_5())
+window.bind('<6>', lambda event: n_6())
+window.bind('<7>', lambda event: n_7())
+window.bind('<8>', lambda event: n_8())
+window.bind('<9>', lambda event: n_9())
 
 #define grid
 
