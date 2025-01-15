@@ -7,7 +7,7 @@ Hey everyone, welcome to my calculator using python and tkinter + customtkinter 
 > [!IMPORTANT]
 > This repository is currently under construction, so that anyone interested can test the calculator out. Therefore I am going to change the structure of the repo.
 >
-> The goal is to dockerise very version of the calculator so it will run on your machine too 👍
+> The goal is to dockerise every version of the calculator so it will run on your machine too 👍
 
 ## Description of the repo
 
