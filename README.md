@@ -11,7 +11,7 @@ Welcome to my calculator using python and tkinter + customtkinter libraries for 
 
 ## Description of the repo
 
-| File / Calculator Version   | Version Description |
+| File / Version   | Version Description |
 | -------- | ------- |
 | Taschenrechner_V01 | simple command line calculator |
 | Taschenrechner_V02 | introduction of simple functions for operations |
