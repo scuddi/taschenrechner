@@ -2,7 +2,7 @@
 
 ❗ **This is my first python project ever** ❗
 
-Hey everyone, welcome to my calculator using python and tkinter + customtkinter libraries for the GUI.
+Welcome to my calculator using python and tkinter + customtkinter libraries for the GUI.
 
 > [!IMPORTANT]
 > This repository is currently under construction, so that anyone interested can test the calculator out. Therefore I am going to change the structure of the repo.
