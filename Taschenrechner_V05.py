@@ -199,7 +199,7 @@ del_button = customtkinter.CTkButton(master = window,
 #bind function buttons to keyboard buttons
 
 window.bind('<Return>', lambda event: equal())
-window.bind('<+>', lambda event: plus())
+window.bind('+', lambda event: plus())
 window.bind('-', lambda event: minus())
 window.bind('*', lambda event: multiplicator())
 window.bind('/', lambda event: division())
