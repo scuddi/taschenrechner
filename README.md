@@ -1,4 +1,4 @@
-# This is a little repository with a python calculator including a GUI with tkinter an customtkinter
+# Basic GUI Calculator with python + tkinter + customtkinter
 
 ❗ **This is my first python project ever** ❗
 
